@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import hero from "../img.png"
 const Main = () => {
   return (
     <div className="container mx-auto px-4 md:px-0 ">
