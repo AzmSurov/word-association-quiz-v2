@@ -5,7 +5,14 @@ import toast, { Toaster } from "react-hot-toast";
 import axios from "axios";
 
 const Game = () => {
-const apiKey = process.env.REACT_APP
+let apiKey;
+if(process.env.NODE_ENV !== 'production') {
+  apiKey = process.env.REACT_APP_RAPID_API_KEY;
+    console.log(apiKey);
+} else {
+  apiKey = process.env.REACT_APP_RAPID_API_KEY2;
+    console.log(apiKey);
+}
   const [showOptions, setShowOptions] = useState(false);
   const [chosenLevel, setChosenLevel] = useState(null);
   const [value, setValue] = useState("Select Level");
